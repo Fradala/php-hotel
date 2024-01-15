@@ -77,30 +77,51 @@
     <table class="table">
         <thead>
             <tr>
-            <th scope="col"><?php echo $hotel['name'] ?></th>
-            <th scope="col"><?php echo $hotel['description'] ?></th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+                <?php foreach ( $hotels as $hotel ) { ?>
+                    <td>
+                        <?php echo $hotel['name']; ?>
+                    </td>
+
+                <?php } ?>
             </tr>
         </thead>
         <tbody>
             <tr>
-            <th scope="row"><?php echo $hotel['name'] ?></th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+                <?php foreach ( $hotels as $hotel ) { ?>
+                    <td>
+                        <?php echo $hotel['description']; ?>
+                    </td>
+
+                <?php } ?>
             </tr>
             <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+                <?php foreach ( $hotels as $hotel ) { ?>
+                    <td>
+                        <?php echo $hotel['parking']; ?>
+                    </td>
+
+                <?php } ?>
             </tr>
             <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+                <?php foreach ( $hotels as $hotel ) { ?>
+                    <td>
+                        <?php echo $hotel['vote']; ?>
+                    </td>
+
+                <?php } ?>
             </tr>
+            <tr>
+                <?php foreach ( $hotels as $hotel ) { ?>
+                    <td>
+                        <?php echo $hotel['distance_to_center']; ?>
+                    </td>
+
+                <?php } ?>
+            </tr>
+            
+
+            
+            
         </tbody>
     </table>
 
